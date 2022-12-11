@@ -1,16 +1,26 @@
-import PropTypes from "prop-types";
-import styles from "./Button.module.css";
 
-function Button({ text, click, id }) {
+import styled, { css } from "styled-components";
+
+function Button( props ) {
   return (
-    <button className={styles.btn} onClick={click} id={id}>
-      {text}
-    </button>
+    <StyledButton onClick={props.click} id={props.id} backgroundColor={props.bcolor} width={props.width} height={props.height} style={{color: "white"}}>
+      {props.text}
+    </StyledButton>
   );
 }
 
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
+Button.defaultProps = {
+  width: '80%',
+  height: '80%',
+  
 };
+
+
+const StyledButton = styled.button`
+  width:  ${(props) => props.width};
+  height: ${(props) => props.height};
+  background : ${(props) => props.backgroundColor};
+  
+`;
 
 export default Button;

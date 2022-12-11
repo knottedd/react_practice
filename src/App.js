@@ -19,19 +19,19 @@ function App() {
         </div>
         <div className={styles.form}>
           <div className={styles.smalldiv}>
-            <Input id={"logid"} text={"id"} ph={"아이디를 입력해주세요"} />
+            <Input id={"logid"} text={"ID"} ph={"아이디를 입력해주세요"} />
           </div>
           <div className={styles.smalldiv}>
-            <Input id={"logpw"} text={"pw"} ph={"비밀번호를 입력해주세요"} />
+            <Input id={"logpw"} text={"PW"} ph={"비밀번호를 입력해주세요"} />
           </div>
           <div className={styles.smalldiv}>
             <Button
               text={"로그인"}
               click={alertLogin}
-              color={"tomato"}
+              bcolor={"#E46C0A"}
               id={"btn1"}
             />
-            <Button text={"회원가입"} click={logJoin} id={"btn2"} />
+            <Button text={"회원가입"} click={logJoin} id={"btn2"} bcolor={"#92D050"} />
           </div>
         </div>
       </div>
@@ -42,21 +42,22 @@ function App() {
         </div>
         <div className={styles.form}>
           <div className={styles.smalldiv}>
-            <Input id={123} text={"id"} ph={"아이디를 입력해주세요"} />
-            <Button text={value} click={idCheck} id={"btn3"} />
+            <Input id={"joinid"} text={"ID"} ph={"아이디를 입력해주세요"} width={230}/>
+            <Button text={value} click={idCheck} id={"btn3"} bcolor={"#FF0000"} width={"100px;"} height={"40px;"}/>
           </div>
           <div className={styles.smalldiv}>
-            <Input id={456} text={"pw"} ph={"비밀번호를 입력해주세요"} />
+            <Input id={"joinpw"} text={"PW"} ph={"비밀번호를 입력해주세요"} width={337}/>
           </div>
           <div className={styles.smalldiv}>
             <Input
-              id={456}
-              text={"pw체크"}
+              id={"joinpwck"}
+              text={"PW체크"}
               ph={"비밀번호를 다시 입력해주세요"}
+              width={337}
             />
           </div>
           <div className={styles.smalldiv}>
-            <Input id={456} text={"email"} ph={"이메일을 입력해주세요"} />
+            <Input id={"joinem"} text={"Email"} ph={"이메일을 입력해주세요"} width={130}/>
             <span>@</span>
             <select>
               <option checked>devrock.co.kr</option>
@@ -65,8 +66,8 @@ function App() {
             </select>
           </div>
           <div className={styles.smalldiv}>
-            <Button text={"로그인"} click={checkId} id={"btn4"} />
-            <Button text={"회원가입"} click={checkJoin} id={"btn5"} />
+            <Button text={"로그인"} click={checkId} id={"btn4"} bcolor={"#4F81BD"} />
+            <Button text={"회원가입"} click={checkJoin} id={"btn5"} bcolor={"#C4BD97"} />
           </div>
         </div>
       </div>
