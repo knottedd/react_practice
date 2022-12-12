@@ -164,7 +164,7 @@ function App() {
       </div>
       <div className={styles.btndiv}>
         <Button
-          text={"Value 보기"}
+          text={"reset"}
           width={"500px;"}
           height={"100px;"}
           bcolor={"darkgray"}
