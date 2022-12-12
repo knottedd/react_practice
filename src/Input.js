@@ -1,17 +1,20 @@
+import { useState } from "react";
 import styles from "./Input.module.css";
 
-function Input({ id, text, ph, width }) {
+function Input({ id, text, ph, width, type, name, onChange }) {
   return (
     <>
       <label htmlFor={id} className={styles.label}>
         {text}
       </label>
       <input
-        type="text"
+        type={type}
         className={styles.input}
         id={id}
         placeholder={ph}
         style={{ width }}
+        name={name}
+        onChange={onChange}
       />
     </>
   );
