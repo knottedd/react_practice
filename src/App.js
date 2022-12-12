@@ -31,7 +31,12 @@ function App() {
               bcolor={"#E46C0A"}
               id={"btn1"}
             />
-            <Button text={"회원가입"} click={logJoin} id={"btn2"} bcolor={"#92D050"} />
+            <Button
+              text={"회원가입"}
+              click={logJoin}
+              id={"btn2"}
+              bcolor={"#92D050"}
+            />
           </div>
         </div>
       </div>
@@ -42,11 +47,28 @@ function App() {
         </div>
         <div className={styles.form}>
           <div className={styles.smalldiv}>
-            <Input id={"joinid"} text={"ID"} ph={"아이디를 입력해주세요"} width={230}/>
-            <Button text={value} click={idCheck} id={"btn3"} bcolor={"#FF0000"} width={"100px;"} height={"40px;"}/>
+            <Input
+              id={"joinid"}
+              text={"ID"}
+              ph={"아이디를 입력해주세요"}
+              width={230}
+            />
+            <Button
+              text={value}
+              click={idCheck}
+              id={"btn3"}
+              bcolor={"#FF0000"}
+              width={"100px;"}
+              height={"40px;"}
+            />
           </div>
           <div className={styles.smalldiv}>
-            <Input id={"joinpw"} text={"PW"} ph={"비밀번호를 입력해주세요"} width={337}/>
+            <Input
+              id={"joinpw"}
+              text={"PW"}
+              ph={"비밀번호를 입력해주세요"}
+              width={337}
+            />
           </div>
           <div className={styles.smalldiv}>
             <Input
@@ -57,7 +79,12 @@ function App() {
             />
           </div>
           <div className={styles.smalldiv}>
-            <Input id={"joinem"} text={"Email"} ph={"이메일을 입력해주세요"} width={130}/>
+            <Input
+              id={"joinem"}
+              text={"Email"}
+              ph={"이메일을 입력해주세요"}
+              width={130}
+            />
             <span>@</span>
             <select>
               <option checked>devrock.co.kr</option>
@@ -66,8 +93,18 @@ function App() {
             </select>
           </div>
           <div className={styles.smalldiv}>
-            <Button text={"로그인"} click={checkId} id={"btn4"} bcolor={"#4F81BD"} />
-            <Button text={"회원가입"} click={checkJoin} id={"btn5"} bcolor={"#C4BD97"} />
+            <Button
+              text={"로그인"}
+              click={checkId}
+              id={"btn4"}
+              bcolor={"#4F81BD"}
+            />
+            <Button
+              text={"회원가입"}
+              click={checkJoin}
+              id={"btn5"}
+              bcolor={"#C4BD97"}
+            />
           </div>
         </div>
       </div>

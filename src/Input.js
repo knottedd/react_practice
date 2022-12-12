@@ -6,7 +6,13 @@ function Input({ id, text, ph, width }) {
       <label htmlFor={id} className={styles.label}>
         {text}
       </label>
-      <input type="text" className={styles.input} id={id} placeholder={ph} style={{width}} />
+      <input
+        type="text"
+        className={styles.input}
+        id={id}
+        placeholder={ph}
+        style={{ width }}
+      />
     </>
   );
 }
