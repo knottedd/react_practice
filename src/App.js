@@ -10,6 +10,11 @@ function App() {
   const idCheck = () => setValue("성공:)");
   const checkJoin = () => prompt("인생이란 무엇일까?");
   const checkId = () => window.confirm("로그인 하시겠습니까?!!?!?");
+  const [show, setShow] = useState(false);
+  const click = () => {
+    setShow(!show);
+  };
+
   const [text, setText] = useState({
     id1: "",
     pw1: "",
@@ -164,19 +169,32 @@ function App() {
       </div>
       <div className={styles.btndiv}>
         <Button
-          text={"reset"}
+          text={"확인"}
           width={"500px;"}
           height={"100px;"}
           bcolor={"darkgray"}
-          click={reset}
+          click={click}
         />
-        <h3>로그인 아이디 : {id1}</h3>
-        <h3>로그인 패스워드 : {pw1}</h3>
-        <h3>회원가입 아이디 : {id2}</h3>
-        <h3>회원가입 패스워드 : {pw2}</h3>
-        <h3>회원가입 패스워드 확인 : {pw3}</h3>
-        <h3>회원가입 이메일 : {em1}</h3>
       </div>
+      {show ? (
+        <div className={styles.btndiv}>
+          <Button
+            text={"reset"}
+            width={"500px;"}
+            height={"100px;"}
+            bcolor={"darkgray"}
+            click={reset}
+          />
+          <h3>로그인 아이디 : {id1}</h3>
+          <h3>로그인 패스워드 : {pw1}</h3>
+          <h3>회원가입 아이디 : {id2}</h3>
+          <h3>회원가입 패스워드 : {pw2}</h3>
+          <h3>회원가입 패스워드 확인 : {pw3}</h3>
+          <h3>회원가입 이메일 : {em1}</h3>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }
