@@ -1,7 +1,27 @@
 import Button from "./Button";
 import Input from "./Input";
 import styles from "./App.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+function Content({ click, id1, pw1, id2, pw2, pw3, em1 }) {
+  return (
+    <div className={styles.btndiv}>
+      <Button
+        text={"reset"}
+        width={"500px;"}
+        height={"100px;"}
+        bcolor={"darkgray"}
+        click={click}
+      />
+      <h3>로그인 아이디 : {id1}</h3>
+      <h3>로그인 패스워드 : {pw1}</h3>
+      <h3>회원가입 아이디 : {id2}</h3>
+      <h3>회원가입 패스워드 : {pw2}</h3>
+      <h3>회원가입 패스워드 확인 : {pw3}</h3>
+      <h3>회원가입 이메일 : {em1}</h3>
+    </div>
+  );
+}
 
 function App() {
   const alertLogin = () => alert("로그인 되었습니다!");
@@ -11,6 +31,7 @@ function App() {
   const checkJoin = () => prompt("인생이란 무엇일까?");
   const checkId = () => window.confirm("로그인 하시겠습니까?!!?!?");
   const [show, setShow] = useState(false);
+
   const click = () => {
     setShow(!show);
   };
@@ -44,6 +65,20 @@ function App() {
       em1: "",
     });
   };
+
+  useEffect(() => {
+    if (!show) {
+      setText({
+        id1: "",
+        pw1: "",
+        id2: "",
+        pw2: "",
+        pw3: "",
+        em1: "",
+      });
+    } else {
+    }
+  }, [show]);
 
   return (
     <>
@@ -177,21 +212,15 @@ function App() {
         />
       </div>
       {show ? (
-        <div className={styles.btndiv}>
-          <Button
-            text={"reset"}
-            width={"500px;"}
-            height={"100px;"}
-            bcolor={"darkgray"}
-            click={reset}
-          />
-          <h3>로그인 아이디 : {id1}</h3>
-          <h3>로그인 패스워드 : {pw1}</h3>
-          <h3>회원가입 아이디 : {id2}</h3>
-          <h3>회원가입 패스워드 : {pw2}</h3>
-          <h3>회원가입 패스워드 확인 : {pw3}</h3>
-          <h3>회원가입 이메일 : {em1}</h3>
-        </div>
+        <Content
+          id1={id1}
+          pw1={pw1}
+          id2={id2}
+          pw2={pw2}
+          pw3={pw3}
+          em1={em1}
+          click={reset}
+        />
       ) : (
         ""
       )}
