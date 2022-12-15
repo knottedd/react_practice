@@ -68,14 +68,7 @@ function App() {
 
   useEffect(() => {
     if (!show) {
-      setText({
-        id1: "",
-        pw1: "",
-        id2: "",
-        pw2: "",
-        pw3: "",
-        em1: "",
-      });
+      reset();
     } else {
     }
   }, [show]);

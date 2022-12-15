@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./Input.module.css";
 
 function Input({ id, text, ph, width, type, name, onChange }) {
